@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a simple starter template to build Excel (Manifest can be generated for other office products) Add-Ins with Vue.js and Vite.
+This is a simple starter template to build Excel (Manifest can be generated for other office products including Power Point, Word etc) Add-Ins with Vue.js and Vite.
 
 ## Features
 
