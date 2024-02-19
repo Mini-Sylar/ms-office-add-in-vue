@@ -35,5 +35,11 @@ npm run dev
 5. Sideload the add-in to Excel (Web is much easier). See [Sideload an Office Add-in on Windows](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing)
 
 
+## Generating Manifest Files for Other Office Products
+[Generating Manifest Files](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-vue#generate-the-manifest-file)
+
+- Replace the manifest file with your new manifest file
+
+
 ## Build
 Coming soon but should be as simple as running `npm run build` and then sideloading the add-in to Excel.
