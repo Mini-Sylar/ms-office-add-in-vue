@@ -7,6 +7,10 @@
         <a href="#/">Home</a>
         <a href="#/about">About</a>
       </nav>
+      <div>
+        <p>Count: {{ counterStore.count }}</p>
+        <button class="counter-btn" @click="counterStore.increment">Increment Count</button>
+      </div>
     </div>
   </header>
   <main>
@@ -19,6 +23,9 @@ import HelloWorld from './components/HelloWorld.vue'
 import { routes } from './router'
 import { ref, computed, onUnmounted } from 'vue'
 import NotFoundView from '@/views/NotFoundView.vue'
+import { useCounterStore } from './stores/counter'
+
+const counterStore = useCounterStore()
 
 const currentPath = ref<string>(window.location.hash)
 
@@ -71,6 +78,22 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+.counter-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
+  scale: 1;
+  transition: all 0.2s;
+}
+
+.counter-btn:active {
+  scale: 0.95;
 }
 
 @media (min-width: 1024px) {
