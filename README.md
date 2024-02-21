@@ -7,7 +7,7 @@ This is a simple starter template to build Excel (Manifest can be generated for 
 ## Features
 
 - `Vue 3.4 💚` + `Vite 5 💜💛` + `TypeScript 💙`
-- `Custom Hash based routing` 🔗 (Vue Router causes infinite reloads)
+- `Custom Hash based routing` 🔗 (Vue Router causes infinite reloads on web history, try using hash mode)
 - [`officeAddin 🔌`](https://github.com/jozefizso/vite-plugin-office-addin/tree/main/src) to generate manifest file at build time
     - See readme for configuration options
 
