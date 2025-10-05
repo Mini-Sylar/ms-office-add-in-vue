@@ -4,9 +4,13 @@
 
 This is a simple starter template to build Excel (Manifest can be generated for other office products including Power Point, Word etc) Add-Ins with Vue.js and Vite.
 
+## Screenshot
+
+[![Screenshot](https://drive.google.com/uc?export=view&id=15d8sKZm38bAdxgus6xwguslZlxVTh8hN)](https://drive.google.com/file/d/15d8sKZm38bAdxgus6xwguslZlxVTh8hN/view?usp=drive_link)
+
 ## Features
 
-- `Vue 3.4 💚` + `Vite 5 💜💛` + `TypeScript 💙`
+- `Vue 3.4 💚` + `Vite 7 💜💛` + `TypeScript 💙`
 - `Vue Router Hash Mode` 🔗
 - [`officeAddin 🔌`](https://github.com/jozefizso/vite-plugin-office-addin/tree/main/src) to generate manifest file at build time
   - See readme for configuration options
