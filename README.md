@@ -7,9 +7,9 @@ This is a simple starter template to build Excel (Manifest can be generated for 
 ## Features
 
 - `Vue 3.4 💚` + `Vite 5 💜💛` + `TypeScript 💙`
-- `Custom Hash based routing` 🔗 (Vue Router causes infinite reloads on web history, try using hash mode)
+- `Vue Router Hash Mode` 🔗
 - [`officeAddin 🔌`](https://github.com/jozefizso/vite-plugin-office-addin/tree/main/src) to generate manifest file at build time
-    - See readme for configuration options
+  - See readme for configuration options
 
 ## Getting Started (Local Development)
 
@@ -34,12 +34,12 @@ npm run dev
 
 5. Sideload the add-in to Excel (Web is much easier). See [Sideload an Office Add-in on Windows](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing)
 
-
 ## Generating Manifest Files for Other Office Products
+
 [Generating Manifest Files](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-vue#generate-the-manifest-file)
 
 - Replace the manifest file with your new manifest file
 
-
 ## Build
+
 Coming soon but should be as simple as running `npm run build` and then sideloading the add-in to Excel.

@@ -1,24 +1,20 @@
+import { createRouter, createWebHashHistory, createMemoryHistory } from 'vue-router'
+
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
-import type { ComponentOptionsMixin, DefineComponent, ExtractPropTypes, PublicProps } from 'vue'
 
-type pageComponent = DefineComponent<
-  {},
-  {},
-  {},
-  {},
-  {},
-  ComponentOptionsMixin,
-  ComponentOptionsMixin,
-  {},
-  string,
-  PublicProps,
-  Readonly<ExtractPropTypes<{}>>,
-  {},
-  {}
->
+const useHashHistory =
+  typeof window !== 'undefined' &&
+  window.history &&
+  typeof window.history.pushState === 'function' &&
+  typeof window.history.replaceState === 'function'
 
-export const routes: Record<string, pageComponent> = {
-  '/': HomeView,
-  '/about': AboutView
-}
+const router = createRouter({
+  history: useHashHistory ? createWebHashHistory() : createMemoryHistory(),
+  routes: [
+    { path: '/', component: HomeView },
+    { path: '/about', component: AboutView }
+  ]
+})
+
+export default router

@@ -4,44 +4,27 @@
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <nav>
-        <a href="#/">Home</a>
-        <a href="#/about">About</a>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
       </nav>
-      <div>
-        <p>Count: {{ counterStore.count }}</p>
-        <button class="counter-btn" @click="counterStore.increment">Increment Count</button>
+      <div style="text-align: center">
+        <div>
+          For more information, check out the
+          <a href="https://github.com/Mini-Sylar/ms-office-add-in-vue" target="_blank">
+            GitHub repository
+          </a>
+        </div>
       </div>
     </div>
   </header>
   <main>
-    <component :is="currentView" />
+    <RouterView></RouterView>
   </main>
 </template>
 
 <script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { routes } from './router'
-import { ref, computed, onUnmounted } from 'vue'
-import NotFoundView from '@/views/NotFoundView.vue'
-import { useCounterStore } from './stores/counter'
-
-const counterStore = useCounterStore()
-
-const currentPath = ref<string>(window.location.hash)
-
-function updateCurrentPath() {
-  currentPath.value = window.location.hash
-}
-
-window.addEventListener('hashchange', updateCurrentPath)
-
-const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || '/'] || NotFoundView
-})
-
-onUnmounted(() => {
-  window.removeEventListener('hashchange', updateCurrentPath)
-})
 </script>
 
 <style scoped>
@@ -81,7 +64,6 @@ nav a:first-of-type {
 }
 
 .counter-btn {
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: 4px;
