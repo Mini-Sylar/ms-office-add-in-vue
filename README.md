@@ -1,8 +1,8 @@
-# Build Excel/ Any Office Add-Ins with Vue.js and Vite (W.I.P)
+# Build Excel/ Any Office Add-Ins with Vue.js and Vite
 
 ## Introduction
 
-This is a simple starter template to build Excel (Manifest can be generated for other office products including Power Point, Word etc) Add-Ins with Vue.js and Vite.
+This is a simple starter template to build Microsoft Add-Ins with Vue.js and Vite.
 
 ## Screenshot
 
